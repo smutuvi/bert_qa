@@ -308,7 +308,7 @@ class SQuAD(object):
           steps_per_loop=200,
           train_batch_size=4,
           learning_rate=8e-5,
-          num_train_epochs=4,
+          num_train_epochs=10,
           custom_callbacks=None,
           run_eagerly=False,
           fp16_implementation="keras"):
