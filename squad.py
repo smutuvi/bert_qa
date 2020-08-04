@@ -221,8 +221,8 @@ class SQuAD(object):
 
   def preprocess_training_data(self, 
     squad_data_file="train-v1.1.json",
-    max_seq_length=384,
-    max_query_length=64,
+    max_seq_length=512,
+    max_query_length=128,
     doc_stride=128,
     fine_tuning_task_type="squad",
     tokenizer_impl="word_piece",
@@ -306,9 +306,9 @@ class SQuAD(object):
   def fit(self,
           init_checkpoint=None,
           steps_per_loop=200,
-          train_batch_size=4,
-          learning_rate=8e-5,
-          num_train_epochs=10,
+          train_batch_size=8,
+          learning_rate=3e-5,
+          num_train_epochs=30,
           custom_callbacks=None,
           run_eagerly=False,
           fp16_implementation="keras"):
